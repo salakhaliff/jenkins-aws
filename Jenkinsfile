@@ -1,6 +1,5 @@
 pipeline {
     agent none
-
     stages {
         stage('Build') {
             steps {
@@ -15,6 +14,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            }
+        }
+        stage('Testing AWS') {
+            steps {
+                aws --version
             }
         }
     }
