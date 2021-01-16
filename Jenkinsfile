@@ -19,7 +19,7 @@ pipeline {
         stage('Testing AWS') {
             steps {
                 node('master'){
-                    sh('aws --version')
+                    bash('aws --version')
                 }
                 
             }
