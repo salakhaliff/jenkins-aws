@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Testing AWS') {
             steps {
-                aws --version
+                sh('aws --version')
             }
         }
     }
