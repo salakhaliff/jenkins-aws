@@ -1,30 +1,22 @@
 pipeline {
     agent none
+
     stages {
-        stage('Build') {
+
+        stage ('Hello') {
+            agent any
+
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-        stage('Testing AWS') {
-            steps {
-                node('master'){
-                    sh '''#!/bin/bash
-                        aws --version
-                    '''
-                }
-                
+                echo 'Hello, '
+
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who I'm $SHELL"
+                '''
             }
         }
     }
 }
+
+
