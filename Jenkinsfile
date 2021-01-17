@@ -13,7 +13,7 @@ pipeline {
 
                     echo "Hello from bash"
                     echo "Who I'm $SHELL"
-		    aws --version
+		    /usr/local/bin/aws --version
                 '''
             }
         }
