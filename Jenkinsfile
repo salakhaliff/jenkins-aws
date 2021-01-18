@@ -10,6 +10,7 @@ pipeline {
                 echo 'Hello, '
 		echo 'this houldtrigger a build '
 		echo 'test polling'
+		echo 'this should trigger now'
 		sh '''#!/bin/bash
 
                     echo "Hello from bash"
