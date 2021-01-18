@@ -9,6 +9,7 @@ pipeline {
             steps {
                 echo 'Hello, '
 		echo 'this houldtrigger a build '
+		echo 'test polling'
 		sh '''#!/bin/bash
 
                     echo "Hello from bash"
